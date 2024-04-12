@@ -3,6 +3,8 @@
 
 This is a library management system developed in C# using .Net framework with a SQL database backend. The system allows customers to search for books and CDs available in the library, as well as register an account, borrow books, and return them.
 
+
+
 Features
 
 
@@ -16,6 +18,8 @@ Borrowing: Registered users can borrow books and CDs from the library.
 Returning: Users can return borrowed items back to the library.
 
 Admin Panel: Administrators have access to manage books, CDs, users, and borrowing records.
+
+
 
 
 
