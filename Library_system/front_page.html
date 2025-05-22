@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <style>
+        body {
+		    position: relative;
+		    font-family: "Garamond", Georgia, serif;
+		    margin: 0;
+		    padding: 0;
+		    background-color: #f4f4f4;
+		    overflow-x: hidden;
+		    z-index: 0;
+		}
+
+		body::before {
+		    content: "";
+		    position: fixed; 
+		    top: 0;
+		    left: 0;
+		    width: 100vw;
+		    height: 100vh;
+		    background: url('https://images.unsplash.com/photo-1695303521458-ecde5b764960?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+		    filter: blur(8px);
+		    opacity: 0.5; 
+		    z-index: -1; 
+		}
+        header {
+            background: darkblue;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background: darkblue;
+            padding: 10px 0;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: transparent;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background: #35424a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background: #e8491d;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #35424a;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#students">Students</a></li>
+            <li><a href="#transactions">Transactions</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="login">
+        <h2>Admin Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="container" id="books">
+        <h2>Book Management</h2>
+        
+        <h3>Add New Book</h3>
+        <form>
+            <div class="form-group">
+                <label for="book-title">Title:</label>
+                <input type="text" id="book-title" required>
+            </div>
+            <div class="form-group">
+                <label for="book-author">Author:</label>
+                <input type="text" id="book-author" required>
+            </div>
+            <div class="form-group">
+                <label for="book-isbn">ISBN:</label>
+                <input type="text" id="book-isbn" required>
+            </div>
+            <div class="form-group">
+                <label for="book-quantity">Quantity:</label>
+                <input type="number" id="book-quantity" required>
+            </div>
+            <button type="submit">Add Book</button>
+        </form>
+        
+        <h3>Search Books</h3>
+        <div class="form-group">
+            <input type="text" id="search-book" placeholder="Search by title, author or ISBN">
+            <button>Search</button>
+        </div>
+        
+        <table style="background: transparent;">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Available</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Hundred-Year-Old Man Who Climbed Out the Window and Disappeared</td>
+                    <td>Jonas Jonasson</td>
+                    <td>9780349141800</td>
+                    <td>5</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Currency Wars</td>
+                    <td>Song Hongbing</td>
+                    <td>9781913890582</td>
+                    <td>1</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones</td>
+                    <td>James Clear</td>
+                    <td>9780735211292</td>
+                    <td>6</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
