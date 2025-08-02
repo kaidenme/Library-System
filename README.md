@@ -3,6 +3,10 @@
 
 This is a library management system developed in C# using .Net framework with a SQL database backend. The system allows customers to search for books and CDs available in the library, as well as register an account, borrow books, and return them.
 
+
+
+
+
 <img width="1556" height="950" alt="image" src="https://github.com/user-attachments/assets/206a8265-eba7-435e-8582-66fcb7da6b1c" />
 
 
