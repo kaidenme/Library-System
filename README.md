@@ -27,6 +27,8 @@ This is a library management system developed in C# using .Net framework with a 
 
 <img width="1305" height="824" alt="image" src="https://github.com/user-attachments/assets/a7beabd0-eb3d-4d4f-8205-fdd7f95a86ab" />
 
+## AWS Architecture
+<img width="1321" height="1361" alt="LibAWS" src="https://github.com/user-attachments/assets/4e84d2da-72f4-4759-817f-0834d48597d8" />
 
 
 ## Technologies Used
